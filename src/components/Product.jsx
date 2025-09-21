@@ -1,5 +1,43 @@
+import { useNavigate } from "react-router-dom";
+
 const Product = () => {
-  return <div>Product</div>;
+  const navigate = useNavigate();
+  const NavigateHandler = (name) => {
+    navigate(`/product/detail/${name}`);
+  };
+
+  return (
+    <div>
+      <h1 className="text-4xl font-thin mb-5">Products</h1>
+      <div className="mb-5">
+        <h1 className="text-2xl font-thin">Product 1</h1>
+        <button
+          onClick={() => NavigateHandler("Product 1")}
+          className="bg-white text-black px-4 py-2 rounded mb-3"
+        >
+          See Details
+        </button>
+      </div>
+      <div className="mb-5">
+        <h1 className="text-2xl font-thin">Product 2</h1>
+        <button
+          onClick={() => NavigateHandler("Product 2")}
+          className="bg-white text-black px-4 py-2 rounded mb-3"
+        >
+          See Details
+        </button>
+      </div>
+      <div className="mb-5">
+        <h1 className="text-2xl font-thin">Product 3</h1>
+        <button
+          onClick={() => NavigateHandler("Product 3")}
+          className="bg-white text-black px-4 py-2 rounded mb-3"
+        >
+          See Details
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default Product;
