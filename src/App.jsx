@@ -1,20 +1,11 @@
-import { Route, Routes } from "react-router-dom"
-import Home from "./components/Home"
-import Products from "./components/Products"
-import Service from "./components/Service"
-import About from "./components/About"
 import Nav from "./components/Nav"
+import Mainroutes from "./routes/Mainroutes"
 
 const App = () => {
   return (
-    <div className="w-screen h-screen bg-gray-800 text-white">
+    <div className="w-screen h-screen bg-cyan-700 text-white px-[10%]">
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Products />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <Mainroutes />
     </div>
   )
 }
