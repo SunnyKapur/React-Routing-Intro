@@ -1,31 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 const Nav = () => {
   return (
-    <div className="flex justify-center gap-10 p-10">
-      <NavLink className={(e) => (e.isActive ? "text-pink-400" : "")} to="/">
-        Home
-      </NavLink>
-      <NavLink
-        className={(e) => (e.isActive ? "text-pink-400" : "")}
-        to="/product"
-      >
-        Product
-      </NavLink>
-      <NavLink
-        className={(e) => (e.isActive ? "text-pink-400" : "")}
-        to="/service"
-      >
-        Service
-      </NavLink>
-      <NavLink
-        className={(e) => (e.isActive ? "text-pink-400" : "")}
-        to="/about"
-      >
-        About
-      </NavLink>
+    <div className="flex justify-center gap-10 p-5">
+        <Link to="/">Home</Link>
+        <Link to="/product">Product</Link>
+        <Link to="/service">Service</Link>
+        <Link to="/about">About</Link>
     </div>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
